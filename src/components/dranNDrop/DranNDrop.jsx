@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Aos from 'aos';
+import { Link } from "react-router-dom";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { TouchBackend } from "react-dnd-touch-backend";
@@ -7,7 +8,6 @@ import { COLUMN_NAMES } from "./ItemTypes";
 import Column from "./Column"
 import MovableItem from "./MovableItem"
 import { tasks } from "./ItemTypes";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useSound from 'use-sound';
 import victory from '../../mp3/victory.mp3';
@@ -88,7 +88,18 @@ export const DranNDrop = ({ props }) => {
     };
     const { column__start, PROGRESS } = COLUMN_NAMES;
     return (<>
-        <a className="btn btn-outline-danger mt-3 p-3 rounded-50 " href="#/portfolio" ><h4 className="font-weight-bolder">Back</h4></a>
+                    <div className="container mb-3">
+                <h1 className="mt-5">Игра: Собери слово!</h1>
+<p>Добро пожаловать в игру, где дети могут собирать слова из букв, перетаскивая их по очереди, чтобы они соответствовали изображению.</p>
+<h2>Правила игры:</h2>
+<ul>
+  <li>Вам будет предложено слово, которое нужно составить.</li>
+  <li>Буквы слова будут представлены в виде отдельных элементов.</li>
+  <li>Перетаскивайте буквы по очереди на доску, чтобы образовать правильное слово.</li>
+  <li>Если буква находится в правильной позиции, она будет подсвечена.</li>
+</ul>
+                </div>
+        <Link className="btn btn-outline-danger mt-3 p-3 rounded-50 " to="/portfolio" ><h4 className="font-weight-bolder">Back</h4></Link>
         <div className="container" data-aos="fade-left"
             data-aos-easing="ease-in-sine"
             data-aos-duration="700">
@@ -106,6 +117,8 @@ export const DranNDrop = ({ props }) => {
                         {returnItemsForColumn(column__start)}
                     </Column>
                 </DndProvider>
+
+
             </div>
         </div>
     </>

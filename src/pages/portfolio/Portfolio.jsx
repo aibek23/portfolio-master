@@ -6,26 +6,16 @@ import imgReactDnD from "../../img/png/reactDnD.png";
 import ToDoList from "../../img/png/todolist.png";
 import Calculatorpng from "../../img/png/calculation.png";
 import Calculator from "../../components/calculator/Calculator"
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route,Link } from 'react-router-dom';
 
-class Portfolio extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            DnD: false, ToDo: false
-        }
-        // this.handleClick = this.handleClick.bind(this);
-    }
+const Portfolio = () => {
 
-
-
-    render() {
         return (
             <Container>
                 <Route exact path="/portfolio/todo">
                     <Todolist />
                 </Route>
-                <Route exact path="/portfolio/reactDnD">
+                <Route  path="/portfolio/reactDnD">
                     < DranNDrop />
                 </Route>
                 <Route exact path="/portfolio/calculator">
@@ -33,13 +23,13 @@ class Portfolio extends React.Component {
                     <Calculator />
 
                 </Route>
-                <Route exact path="/portfolio">
+                <Route  exact path="/portfolio">
 
 
 
                     {/* {this.state.DnD ? < DranNDrop props={this.handleClick} /> : " "}
             {this.state.ToDo ? <Todolist props={this.handleClick} /> : " "} */}
-                    < Row lg={3} md={2} cm={1} >
+                    < Row lg="3" md="2" cm="1" >
 
                         <Col lg  >
                             <Card style={{ margin: '1rem 1rem' }} >
@@ -60,10 +50,9 @@ class Portfolio extends React.Component {
                                 <Card.Body>
                                     <Card.Title>игра на react-DnD</Card.Title>
                                     <Card.Text>
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
+                                    Дети могут играть в сбор слов из букв, перемещая их, чтобы они соответствовали изображению.
                                     </Card.Text>
-                                    <a className="btn btn-primary" href="#/portfolio/reactDnD">off</a>
+                                    <Link className="btn btn-primary" to="/portfolio/reactDnD">перейти</Link>
                                 </Card.Body>
                             </Card>
 
@@ -99,6 +88,5 @@ class Portfolio extends React.Component {
             </Container >
         );
     }
-}
 export default Portfolio;
 

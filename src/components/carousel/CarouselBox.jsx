@@ -15,14 +15,14 @@ const CarouselBox = () => {
         Aos.init({ duration: 2000, once: false, });
     }, [])
 
-    return (<>
+    return (<div>
         <i className={s.header__line}></i>
         <Carousel activeIndex={index} onSelect={handleSelect}>
             <Carousel.Item>
                 <div className={s.carousel__item}>
                     <p className={s.carousel__text} data-aos="flip-left" data-aos-once="true"
                     >Здравствуйте! Меня зовут Айбек и я</p>
-                    <h2 className={s.carousel__title} data-aos="flip-left">FRONT-END WEB DEVELOPER</h2>
+                    <h2 className={s.carousel__title} data-aos="flip-left">WEB DEVELOPER</h2>
                     <p className={s.carousel__text} data-aos="flip-left">полный решимости выполнить любой Ваш заказ</p>
                 </div>
                 <img
@@ -35,7 +35,7 @@ const CarouselBox = () => {
             <Carousel.Item>
                 <div className={s.carousel__item}>
                     <p className={s.carousel__text}></p>
-                    <h2 className={s.carousel__title} data-aos="zoom-in" data-aos-once="true">FRONT-END WEB DEVELOPER</h2>
+                    <h2 className={s.carousel__title} data-aos="zoom-in" data-aos-once="true">WEB DEVELOPER</h2>
                     <p className={s.carousel__text} data-aos="zoom-in" style={{ letterSpacing: "0.2rem" }}>клиентская сторона пользовательского интерфейса к <br />программно-аппаратной части сервиса</p>
                 </div>
                 <img
@@ -48,7 +48,7 @@ const CarouselBox = () => {
             <Carousel.Item>
                 <div className={s.carousel__item}>
                     <p className={s.carousel__text}></p>
-                    <h2 className={s.carousel__title}>FRONT-END WEB DEVELOPER</h2>
+                    <h2 className={s.carousel__title}>WEB DEVELOPER</h2>
                     <p className={s.carousel__text}>Hello! My name is Aybek and I</p>
                 </div>
                 <img
@@ -60,7 +60,7 @@ const CarouselBox = () => {
 
             </Carousel.Item>
         </Carousel>
-    </>
+    </div>
     );
 }
 export default CarouselBox;

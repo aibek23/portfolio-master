@@ -12,7 +12,7 @@
 }
 
 .skills_wrapp {
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
   width: 100%;
   right: 0;
 }
@@ -35,7 +35,7 @@
 }
 
 .skills_container:hover .skills {
-  opacity: 0.1;
+  opacity: 0.6;
 }
 
 .skills_container .skills:hover {
@@ -94,13 +94,63 @@
   box-sizing: inset 0 0 2px #000;
   animation: animate 2s ease-in-out forwards;
   animation-timing-function: ease;
-  animation-delay: 3s;
-  animation-iteration-count: 2;
+  animation-delay: 4s;
+  /* animation-iteration-count: 2; */
+}
+
+.home_description {
+  font-size: 16px;
+  font-family: DavidLibre, serif;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.skills_list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.skills_list li {
+  margin-bottom: 10px;
 }
 .dis {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.logo__skills {
+  display: inline-block;
+  margin-right: 10px; /* Пространство между логотипами */
 }
 
+
+.logo__skills {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logo__skills img {
+
+  overflow: hidden;
+  max-width: 100px; /* Задайте желаемую ширину для логотипов */
+  max-height: 100px; /* Автоматический расчет высоты, чтобы сохранить пропорции */
+  border-radius: 50%; /* Округлите углы логотипов (предполагается, что они квадратные) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для эффекта поднятости */
+  transition: transform 0.3s ease; /* Плавный переход при наведении */
+}
+.logo__skills img {
+  width: 100%;
+  height: 100%;
+}
+
+.logo__skills img:hover {
+  transform: scale(1.1); /* Увеличение логотипа при наведении */
+}
 @keyframes animate {
   from {
     width: 0;
@@ -156,16 +206,7 @@
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.logo__skills img {
-  width: 100%;
-  height: 100%;
-}
 
-.logo__skills {
-  height: 50px;
-  width: 50px;
-  overflow: hidden;
-}
 
 @media (max-width: 991px) {
   .skills_container .skills {
